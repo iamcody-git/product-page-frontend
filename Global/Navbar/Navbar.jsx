@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Container, Flex, Link, HStack } from '@chakra-ui/react';
+import { Button, Container, Flex,HStack } from '@chakra-ui/react';
 import { PlusSquareIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Text } from '@chakra-ui/react';
 import { useColorMode } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const { toggleColorMode, colorMode } = useColorMode(); // Destructure from useColorMode()
+  const { toggleColorMode, colorMode } = useColorMode(); 
 
   return (
     <Container maxW={"1140px"} px={4}>
@@ -30,9 +31,9 @@ const Navbar = () => {
         </Text>
 
         <HStack spacing={2} alignItems={"center"}>
-          <Link to={"/create"}>
+          <Link to={'/create'}>
             <Button>
-              <PlusSquareIcon fontSize={20} />
+             <PlusSquareIcon fontSize={20} />
             </Button>
           </Link>
           <Button onClick={toggleColorMode}>
