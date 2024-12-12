@@ -4,6 +4,7 @@ import { Container, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { useProductStore } from "../Store/Product";
 import ProductCard from "../../Global/Crad/ProductCard";
+import Footer from "../../Global/Footer/Footer";
 
 const HomePage = () => {
   const { fetchProducts, products } = useProductStore();
@@ -67,6 +68,7 @@ const HomePage = () => {
           )}
         </VStack>
       </Container>
+      <Footer />
     </>
   );
 };

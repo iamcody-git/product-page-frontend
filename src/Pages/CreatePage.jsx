@@ -11,6 +11,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useProductStore } from "../Store/Product";
+import Footer from "../../Global/Footer/Footer";
 
 const CreatePage = () => {
   const [newProduct, setNewProduct] = useState({
@@ -94,6 +95,8 @@ const CreatePage = () => {
           </Box>
         </VStack>
       </Container>
+
+      <Footer/>
     </>
   );
 };

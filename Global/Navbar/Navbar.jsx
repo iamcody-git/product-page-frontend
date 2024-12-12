@@ -4,6 +4,7 @@ import { PlusSquareIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Text } from '@chakra-ui/react';
 import { useColorMode } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import Login from '../Login/Login';
 
 const Navbar = () => {
   const { toggleColorMode, colorMode } = useColorMode(); 
@@ -39,6 +40,17 @@ const Navbar = () => {
           <Button onClick={toggleColorMode}>
             {colorMode === "light" ? <MoonIcon fontSize={20} /> : <SunIcon fontSize={20} />}
           </Button>
+
+          <Link to={'/login'}>
+            <Button>
+            Login
+            </Button>
+          </Link>
+          <Link to={'/register'}>
+          <Button >
+            Register
+          </Button>
+          </Link>
         </HStack>
       </Flex>
     </Container>
